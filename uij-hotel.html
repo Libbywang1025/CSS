@@ -60,22 +60,23 @@
         /* height: calc(100vh-40px); */
       }
 
-      .newsbox {
+      .news-title {
         color: #17312a;
       }
-
-      .newsbox > h2 {
+      .news-title > h2 {
         font-size: 2.9rem;
         margin-bottom: 24px;
         letter-spacing: 3px;
       }
 
-      .newsbox > h3 {
+      .news-title > h3 {
         font-size: 1.125rem;
         font-weight: bold;
         letter-spacing: 0.16em;
       }
-
+      .card {
+        margin: 0 auto;
+      }
       .card-text > small {
         background-color: #17312a;
         color: #fff;
@@ -119,6 +120,9 @@
       }
 
       @media screen and (min-width: 780px) {
+        .card {
+          max-width: 300px;
+        }
         .card .img-wrap {
           width: 248px;
           height: 248px;
@@ -128,6 +132,8 @@
         }
         .card img {
           width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
 
@@ -220,25 +226,27 @@
         padding: 70px 0;
         letter-spacing: 1px;
       }
-
       .viewmore {
         right: 150px;
         bottom: 30px;
       }
-      .rooms-card {
-        border: 1px solid #8b6f4c;
-        margin: 2px;
-        padding: 40px 0;
-      }
-      .roomsbox {
+
+      .roomContent {
         border: 1px solid #8b6f4c;
         margin: 20px 0;
       }
-      .rooms-title {
+      .roomsbox {
+        border: 1px solid #8b6f4c;
+        margin: 2px;
+        padding: 40px 0;
+        text-align: center;
+        color: #8b6f4c;
+      }
+      .roomsTitle {
         text-align: center;
         padding: 30px 0;
       }
-      .rooms-title h2 {
+      .roomsTitle h2 {
         font-family: 'copperplat';
         font-size: 3rem;
         margin-bottom: 24px;
@@ -246,19 +254,16 @@
         letter-spacing: 3px;
         color: #8b6f4c;
       }
-      .rooms-title h3 {
+      .roomsTitle h3 {
         font-size: 1.125rem;
         font-weight: bold;
         letter-spacing: 0.16em;
         color: #8b6f4c;
       }
-      .rooms-content {
-        text-align: center;
-        color: #8b6f4c;
-      }
+
       .viewmore-btn {
         text-align: center;
-        line-height: 20px;
+        line-height: 10px;
         color: #8b6f4c;
         padding-top: 20px;
         margin: 0 auto;
@@ -310,14 +315,14 @@
       .facility h5 {
         margin-top: 10px;
         letter-spacing: 0.05em;
-        color: #8b6f4c
+        color: #8b6f4c;
       }
     </style>
   </head>
 
   <body>
     <nav>
-      <div class="container">
+      <div class="container-fluid">
         <div class="row justify-content-around">
           <div class="nav-reserve d-block d-md-none">
             <a
@@ -376,7 +381,7 @@
     </nav>
 
     <main>
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="bannerbox position-relative w-100 px-0">
             <div
@@ -442,31 +447,25 @@
           </div>
         </div>
         <!-- NEWS -->
-        <div class="row newsbox flex-column align-items-center">
+        <div class="row news-title flex-column align-items-center my-5">
           <h2>NEWS</h2>
           <h3>最新消息</h3>
         </div>
 
-        <div class="row">
+        <div class="row newsbox">
           <div class="col-6 col-md-4">
-            <div class="card border-0">
+            <div class="card border-0 d-flex">
               <div class="img-wrap">
-                <img
-                  class="w-100 h-100"
-                  src="./uij/2022_07_05_1027100.jpg"
-                  alt=""
-                />
+                <img class="w-100" src="./uij/2022_07_15_1326500.jpeg" alt="" />
               </div>
               <div class="card-text">
-                <small class="time">2022.07.05</small>
+                <small class="time">2022.07.15</small>
                 <h3 class="flex-wrap">
-                  【你好漫談Hello Talking】旅行的偶然 x 生活的本事
+                  【2022悠遊國旅－全專案適用】
+                  重返旅行路上，2022悠遊國旅全專案適用！
                 </h3>
                 <div class="content">
-                  <p>
-                    首場系列講座「你好漫談Hello
-                    Talking」邀請知名建築設計師曾令理，與本事空間製作所主理人謝欣曄，聊聊建築人創作路上的養成、旅行及生活的獨到美學，又或是就地展開一場校園同窗時光的大爆料？
-                  </p>
+                  <p>重返旅行路上，2022悠遊國旅全專案適用！</p>
                 </div>
               </div>
             </div>
@@ -475,22 +474,15 @@
           <div class="col-6 col-md-4">
             <div class="card border-0">
               <div class="img-wrap">
-                <img
-                  class="w-100 h-100"
-                  src="./uij/2022_07_05_1027100.jpg"
-                  alt=""
-                />
+                <img class="w-100" src="./uij/2022_07_14_0950480.jpeg" alt="" />
               </div>
               <div class="card-text">
-                <small class="time">2022.07.05</small>
+                <small class="time">2022.07.14</small>
                 <h3 class="flex-wrap">
-                  【你好漫談Hello Talking】旅行的偶然 x 生活的本事
+                  【2022悠遊國旅－0元起入住！再享好禮4選1】
                 </h3>
                 <div class="content">
-                  <p>
-                    首場系列講座「你好漫談Hello
-                    Talking」邀請知名建築設計師曾令理，與本事空間製作所主理人謝欣曄，聊聊建築人創作路上的養成、旅行及生活的獨到美學，又或是就地展開一場校園同窗時光的大爆料？
-                  </p>
+                  <p>使用2022國旅補助，實現0元起入住背包客房，再享好禮4選1！</p>
                 </div>
               </div>
             </div>
@@ -499,11 +491,7 @@
           <div class="mb-card col-6 d-none">
             <div class="card border-0">
               <div class="img-wrap">
-                <img
-                  class="w-100 h-100"
-                  src="./uij/2022_07_05_1027100.jpg"
-                  alt=""
-                />
+                <img class="w-100" src="./uij/2022_07_05_1027100.jpg" alt="" />
               </div>
               <div class="card-text">
                 <small class="time">2022.07.05</small>
@@ -523,11 +511,7 @@
           <div class="mb-card col-md-4 d-md-flex">
             <div class="card border-0">
               <div class="img-wrap">
-                <img
-                  class="w-100 h-100"
-                  src="./uij/2022_07_05_1027100.jpg"
-                  alt=""
-                />
+                <img class="w-100" src="./uij/2022_07_05_1027100.jpg" alt="" />
               </div>
               <div class="card-text">
                 <small class="time">2022.07.05</small>
@@ -645,15 +629,77 @@
         <!-- ROOMS -->
         <div class="row">
           <div class="col">
-
-            <div class="rooms-title">
+            <div class="roomsTitle">
               <h2>ROOMS</h2>
               <h3>房型介紹</h3>
             </div>
+          </div>
+        </div>
+        <div class="roomContent">
+          <div class="roomsbox row d-flex align-items-center ">
+            <div class="col-12 col-md-6">
+              <div class="roomtext col-md-12">
+                <h2>旅館客房 HOTEL</h2>
+                <p>
+                  在夢境與生活之間，<br />
+                  我們旅行，我們閱讀。<br />
+                  <br />
+                  We read in bed because reading is halfway between life and
+                  dreaming.
+                </p>
+              </div>
+            </div>
 
-            <div class="roomsbox">
+            <div class="col-12 col-md-6">
+              <div class="col-md-12">
+                <img
+                  class="w-100 d-block"
+                  src="./uij/2021_01_15_1721380.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <a class="viewmore-btn d-md-none" href="#">
+              <i class="fa-solid fa-right-long"> </i>VIEW MORE
+            </a>
+          </div>
+        </div>
+
+        <div class="roomContent">
+          <div class="roomsbox row d-flex align-items-center">
+            <div class="col-12 col-md-6 order-md-1">
+              <div class="roomtext col-md-12">
+                <h2>背包客房 HOSTEL</h2>
+                <p>
+                  背起行囊，隨著書本出發，<br />
+                  到未竟之地展開冒險。<br />
+                  <br />
+                  Books don't just go with you, they take you where you've never
+                  been.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 order-md-0">
+              <div class="col-md-12">
+                <img
+                  class="w-100 d-block"
+                  src="./uij/2021_10_12_1613360.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <a class="viewmore-btn d-md-none" href="#">
+              <i class="fa-solid fa-right-long"> </i>VIEW MORE
+            </a>
+          </div>
+        </div>
+
+        <!-- <div class="roomsbox">
               <div class="rooms-card d-flex flex-column align-items-center">
-                <div class="rooms-content d-flex flex-column align-items-center">
+                <div
+                  class="rooms-content d-flex flex-column align-items-center"
+                >
                   <h2>旅館客房 HOTEL</h2>
                   <p>
                     在夢境與生活之間，<br />
@@ -664,15 +710,14 @@
                   </p>
                 </div>
                 <div class="img-wrap">
-                  <img class="w-100" src="./uij/2021_01_15_1721380.jpg " alt=""/>
-                </div>
-                <a class="viewmore-btn" href="#">
-                  <i class="fa-solid fa-right-long"> </i>VIEW MORE
-                </a>
-              </div>
-            </div>
+                  <img
+                    class="w-100"
+                    src="./uij/2021_01_15_1721380.jpg"
+                    alt=""
+                  />
+                </div> -->
 
-            <div class="roomsbox">
+        <!-- <div class="roomsbox">
               <div class="rooms-card d-flex flex-column align-items-center">
                 <div
                   class="rooms-content d-flex flex-column align-items-center"
@@ -699,11 +744,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- FACILITY -->
         <div class="row facility">
-          <div class="col ">
+          <div class="col">
             <div class="fa-title">
               <h2>FACILITY</h2>
               <h3>服務設施</h3>
