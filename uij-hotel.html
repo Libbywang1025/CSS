@@ -113,13 +113,13 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
       }
-      @media screen and (min-width: 1px) {
+      @media screen and (min-width: 0px) and (min-width: 375px) {
         .mb-card {
           display: none;
         }
       }
 
-      @media screen and (min-width: 780px) {
+      @media screen and (min-width: 768px) {
         .card {
           max-width: 300px;
         }
@@ -329,16 +329,14 @@
         color: #8b6f4c;
       }
       .footerbox {
-        width: 100%;
+        /* width: 100%; */
         max-width: 1200px;
         margin: 0 auto;
-        padding-top: 45px;
         line-height: 24px;
-        overflow: hidden;
+        margin: 30px 0;
+        align-items: center;
       }
-      .footer-sm {
-        padding: 50px 0;
-      }
+
       .contactbox {
         border-top: 1px solid #8b6f4c;
       }
@@ -356,6 +354,36 @@
         height: 10px;
         display: block;
         margin: 0 auto 10px auto;
+      }
+
+      .footer-logo {
+        max-width: 180px;
+        margin: 0 auto;
+      }
+      .footer-sm {
+        max-width: 180px;
+        margin: 0 auto;
+        padding: 50px 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        .contactbox {
+          text-align: center;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .footer-logo {
+          width: 90%;
+          /* margin: 0 auto; */
+          /* text-align: center; */
+        }
+        .contactbox {
+          border: none;
+        }
+
+        /* .footer-box {
+          margin: 40px 0;
+        } */
       }
     </style>
   </head>
@@ -662,7 +690,7 @@
       </div>
 
       <!-- ROOMS -->
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col">
             <div class="roomsTitle">
@@ -673,7 +701,7 @@
         </div>
         <div class="roomContent">
           <div class="roomsbox row d-flex align-items-center py-0">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
               <div class="roomtext col-md-12">
                 <h2>旅館客房 HOTEL</h2>
                 <p>
@@ -685,7 +713,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-12 col-md-6 p-0">
+            <div class="col-12 col-md-8 p-0">
               <div class="col-md-12 p-0">
                 <img
                   class="w-100 d-block"
@@ -701,7 +729,7 @@
         </div>
         <div class="roomContent">
           <div class="roomsbox row d-flex align-items-center py-0">
-            <div class="col-12 col-md-6 order-md-1">
+            <div class="col-12 col-md-4 order-md-1">
               <div class="roomtext col-md-12">
                 <h2>背包客房 HOSTEL</h2>
                 <p>
@@ -713,7 +741,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-12 col-md-6 order-md-0 p-0">
+            <div class="col-12 col-md-8 order-md-0 p-0">
               <div class="col-md-12 p-0">
                 <img
                   class="w-100 d-block"
@@ -732,7 +760,8 @@
       <!-- FACILITY -->
       <div class="container-fluid">
         <div class="row facility">
-          <div class="col">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
             <div class="fa-title">
               <h2>FACILITY</h2>
               <h3>服務設施</h3>
@@ -741,15 +770,13 @@
             <div class="fa-content">
               <div class="d-md-none text-center">
                 <p>
-                  我們精心打造了各個場域，<br />
-                  卻不企圖改變你，<br />
-                  只希望踏進U.I.J的那一刻起，<br />
-                  就是盡情探索的開始！<br />
-                  粅粅書BBBooks <br />
-                  你好沙龍 Hello Salon<br />
-                  恣意露臺 Free Terrace <br />
-                  共享廚房 Open Kitchen<br />
-                  共聚書房 Gather Studio
+                  我們精心打造了各個場域，卻不企圖改變你，<br />
+                  只希望踏進U.I.J的那一刻起，就是盡情探索的開始！
+                  <br />
+                  粅粅書BBBooks ｜ 你好沙龍 Hello Salon ｜ 恣意露臺 Free Terrace
+                  <br />
+                  共享廚房 Open Kitchen ｜ 共聚書房 Gather Studio
+                  <br>
                 </p>
               </div>
 
@@ -769,6 +796,7 @@
               </div>
             </div>
           </div>
+          <div class="col-md-3"></div>
 
           <div class="fa-img-wrap">
             <ul class="train list-unstyled d-flex">
@@ -798,6 +826,13 @@
       </div>
 
       <!-- CONTACT -->
+      <div class="container-fluid">
+        <div class="contact-title text-center">
+          <h2>CONTACT</h2>
+          <h3>聯絡我們</h3>
+          <p>皆為必填</p>
+        </div>
+      </div>
     </main>
     <!-- FOOTER -->
     <footer>
@@ -805,38 +840,46 @@
         <i></i>
         <span>GO TOP</span>
       </a>
-      <div class="container footerbox">
-        <div class="row justify-content-center justify-content-md-around">
-          <div class="footer-logo my-2">
-            <div class="img-wrap w-100">
-              <img src="./uij/f_logo.png" alt="" />
+      <div class="container-fluid">
+        <div class="row">
+          <div class="footer-box col-12 d-md-flex justify-md-content-center">
+            <div class="col-md-2">
+              <div class="footer-logo mt-5">
+                <div class="img-wrap w-100">
+                  <img class="w-100" src="./uij/f_logo.png" alt="" />
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="footer-sm d-flex order-md-1">
-            <a href="#">
-              <div class="img-wrap mx-2">
-                <img class="w-100" src="./uij/f_icon2.png" alt="" />
+            <div class="col-md-2 order-md-1">
+              <div class="footer-sm d-flex">
+                <a href="#">
+                  <div class="img-wrap mx-2">
+                    <img class="w-100" src="./uij/f_icon2.png" alt="" />
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="img-wrap mx-2">
+                    <img class="w-100" src="./uij/f_icon3.png" alt="" />
+                  </div>
+                </a>
               </div>
-            </a>
-            <a href="#">
-              <div class="img-wrap mx-2">
-                <img class="w-100" src="./uij/f_icon3.png" alt="" />
-              </div>
-            </a>
-          </div>
+            </div>
 
-          <div class="contactbox p-3 m-2 text-center">
-            <p>
-              700 台南市中西區友愛街115巷5號 | 旅館業登記證編號：316 <br />
-              No.5 Ln.115 You-ai St. West Central Dist. Tainan 700
-              <br />
-              <br />
-              TEL &nbsp; +886-6-2218188<br />
-              FAX &nbsp;+886-6-2215123<br />
-              EMAIL &nbsp;uijservice@uij.com.tw<br />
-              Copyright 2017-2021 © All rights reserved U.I.J HOTEL&HOSTEL
-            </p>
+            <div class="col-md-8">
+              <div class="contactbox d-md-flex justify-content-md-center m-5">
+                <p class="m-0">
+                  700 台南市中西區友愛街115巷5號 | 旅館業登記證編號：316 <br />
+                  No.5 Ln.115 You-ai St. West Central Dist. Tainan 700
+                  <br />
+                  <br />
+                  TEL &nbsp; +886-6-2218188<br />
+                  FAX &nbsp;+886-6-2215123<br />
+                  EMAIL &nbsp;uijservice@uij.com.tw<br />
+                  Copyright 2017-2021 © All rights reserved U.I.J HOTEL&HOSTEL
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
